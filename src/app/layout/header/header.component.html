@@ -1,0 +1,20 @@
+<div class="header">
+  <nav routerLink="/">My Store</nav>
+
+  <div class="d-flex flex-row justify-content-evenly align-items-center">
+    <a routerLink="productList"> Product List</a>
+    <a routerLink="cart"
+      >Cart
+
+      <span class="material-symbols-outlined">
+        shopping_cart_checkout
+        <span
+          matBadge="{{ totalItem }}"
+          matBadgeOverlap="false"
+          matBadgeColor="primary"
+          class="cart-bag"
+        ></span>
+      </span>
+    </a>
+  </div>
+</div>

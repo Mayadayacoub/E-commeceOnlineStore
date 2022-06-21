@@ -1,0 +1,39 @@
+<ng-container *ngIf="!selectedItem">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 my-5 text-center">
+        <div class="card shadow">
+          <h1 class="p-5 fs-4 fw-bold">Item With Selected ID Doesn't exist</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<div class="container" *ngIf="selectedItem">
+  <div class="row justify-content-center">
+    <div class="col-md-4 my-5">
+      <div class="card shadow" style="width: 20rem">
+        <img
+          src="{{ selectedItem?.url }}"
+          class="card-img-top p-2"
+          alt="{{ selectedItem?.name }}"
+          style="width: 20rem"
+        />
+
+        <div class="card-body text-center">
+          <h5 class="card-title fs-3 fw-bold my-3 product-name">
+            {{ selectedItem?.name }}
+          </h5>
+          <p class="card-text fs-5">
+            {{ selectedItem?.description }}
+          </p>
+
+          <p class="card-text fw-bold fs-5">
+            Price : {{ selectedItem?.price }} $
+          </p>
+          <a href="/" class="btn button-color">Back To Store</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

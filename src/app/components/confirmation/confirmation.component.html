@@ -1,0 +1,36 @@
+<ng-container *ngIf="routeState">
+  <div
+    class="example-ripple-container mat-elevation-z4 container-lg my-4 shadow"
+    style="width: 30rem"
+    matRipple
+    [matRippleCentered]="centered"
+    [matRippleUnbounded]="unbounded"
+  >
+    <h2 class="my-3 fs-3 fw-bold" routerLink="/">Thank You For Your Order</h2>
+    <h3>Your order is Confirmed</h3>
+    <h4>
+      You will pay the courier manually when you receive your order
+      <hr />
+      <strong>Shipping method Standard</strong>
+      <br />
+      Delivery within 4 - 5 days. Outlet collection should be exchanged from
+      outlet branches only
+    </h4>
+  </div>
+  <div class="card shadow container-lg text-center" style="width: 30rem">
+    <div class="card-body">
+      <h5 class="card-title fs-3 fw-bolder">Customer Information</h5>
+      <h6 class="card-subtitle mb-2 text-muted fw-bold">Contact Information</h6>
+      <p class="card-text">
+        {{ routeState.userName }}
+      </p>
+      <h6 class="card-subtitle mb-2 text-muted fw-bold">Shipping Address</h6>
+      <p class="card-text">{{ routeState.address }}</p>
+      <h6 class="card-subtitle mb-2 text-muted fw-bold">Credit Card</h6>
+      <p class="card-text">{{ routeState.creditCardNumber }}</p>
+      <h6 class="card-subtitle mb-2 text-muted fw-bold">Total Payment</h6>
+      <p>{{ routeState.wholeTotal + routeState.shipping }} $</p>
+      <a href="/" class="card-link btn button-color">Continue shopping</a>
+    </div>
+  </div>
+</ng-container>

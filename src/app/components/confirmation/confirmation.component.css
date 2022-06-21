@@ -1,0 +1,65 @@
+.confirmation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8%;
+}
+
+.confirmation-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirmation-header {
+  color: #33e5bc;
+}
+
+.confirmation-item {
+  margin-bottom: 30px;
+}
+.example-ripple-container {
+  cursor: pointer;
+  text-align: center;
+
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/** Styles to make the demo look better. */
+.example-ripple-checkbox {
+  margin: 6px 12px 6px 0;
+}
+
+.example-ripple-form-field {
+  margin: 0 12px 0 0;
+}
+.sucess {
+  position: relative;
+  left: 10%;
+  width: 70rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.card {
+  margin-bottom: 30px;
+}
+.card h6 {
+  font-size: 1rem;
+}
+.button-color {
+  background-color: #02bdd5;
+  color: white;
+}
+.button-color:hover {
+  background-color: #3bddf3cc;
+}

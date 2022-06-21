@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4 my-5" *ngFor="let item of allItems">
+      <div class="card shadow" style="width: 18rem">
+        <div class="image">
+          <img
+            src="{{ item.url }}"
+            class="card-img-top"
+            alt="{{ item.name }}"
+          />
+          <a routerLink="/productItemDetail/{{ item.id }}">Details</a>
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title fs-2 fw-bold">{{ item.name }}</h5>
+          <h4 class="card-title fs-4 my-4">{{ item.price }} $</h4>
+          <!-- <select
+            id="category"
+            class="form-select text-center my-4"
+            aria-label="Default select example"
+            name="select"
+            required
+            [(ngModel)]="item.quantity"
+          >
+            <option *ngFor="let option of options" [ngValue]="option">
+              {{ option }}
+            </option>
+          </select> -->
+
+          <button
+            class="btn button-color mx-3"
+            (click)="addingProductsToCart(item)"
+          >
+            Add To Cart
+          </button>
+          <!-- <button
+            class="btn btn-primary"
+            routerLink="/productItemDetail/{{ item.id }}"
+          >
+            Show More
+          </button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
